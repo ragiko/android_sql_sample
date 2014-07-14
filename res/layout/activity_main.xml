@@ -8,19 +8,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
-
     <Button
         android:id="@+id/btn_select"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/button1"
-        android:text="select" />
+        android:text="delete registed" />
 
     <EditText
         android:id="@+id/edit_arrive"
@@ -35,15 +29,6 @@
         <requestFocus />
     </EditText>
 
-    <Button
-        android:id="@+id/btn_insert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/textView1"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@+id/textView1"
-        android:text="insert" />
-
     <EditText
         android:id="@+id/edit_start"
         android:layout_width="wrap_content"
@@ -53,5 +38,30 @@
         android:layout_marginTop="56dp"
         android:ems="10"
         android:text="START STATION" />
+
+    <Button
+        android:id="@+id/btn_route1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edit_arrive"
+        android:layout_below="@+id/edit_arrive"
+        android:layout_marginTop="33dp"
+        android:text="ルート1" />
+
+    <Button
+        android:id="@+id/btn_route2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_route1"
+        android:layout_below="@+id/btn_route1"
+        android:text="ルート2" />
+
+    <Button
+        android:id="@+id/btn_route3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btn_route2"
+        android:layout_below="@+id/btn_route2"
+        android:text="ルート3" />
 
 </RelativeLayout>

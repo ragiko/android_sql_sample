@@ -21,11 +21,16 @@ class SampleSQLiteOpenHelper extends SQLiteOpenHelper {
 	public void onCreate(SQLiteDatabase db) {
 		// テーブル作成のクエリを発行
 		db.execSQL(
-			"create table sample_table ( " +
+			"create table routes ( " +
 			"_id integer primary key autoincrement, " +
-			"start_station text not null, " +
-			"arrive_station text not null " +
+			"start_station text, " +
+			"arrive_station text, " +
+			"resisted_route integer" + 
 			");");
+		
+		for (int i = 1; i <= 3; i++) {
+			db.execSQL("insert into routes values("+i+", NULL, NULL, 0);");
+		}
 	}
 	
 	/**
@@ -34,7 +39,7 @@ class SampleSQLiteOpenHelper extends SQLiteOpenHelper {
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// テーブルの破棄と再作成
-		db.execSQL("drop table sample_table;");
+		db.execSQL("drop table routes;");
 		onCreate(db);
 	}
 }
